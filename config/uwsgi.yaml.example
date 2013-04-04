@@ -1,0 +1,12 @@
+uwsgi:
+  uid: nobody
+  master: 1
+  procname-prefix: gistindex-
+  processes: 1
+  socket: 127.0.0.1:8110
+  module: gistindex
+  pidfile: /srv/www/gistindex/log/uwsgi.pid
+  daemonize: /srv/www/gistindex/log/uwsgi.log
+  memory-report: 1
+  idle: 120
+  reload-on-rss: 64
